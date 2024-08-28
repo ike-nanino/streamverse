@@ -10,7 +10,7 @@ type Props = {
 }
 
 async function SearchPage({params: {term}}: Props) {
-
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   if(!term) notFound();
 
   const termToUse = decodeURI(term);
