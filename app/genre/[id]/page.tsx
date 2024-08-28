@@ -10,7 +10,7 @@ type Props = {
     }
 }
 async function GenrePage({ params: {id}, searchParams: {genre} }: Props) {
-
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const movies = await getDiscoverMovies(id);
   return (
     <div>
